@@ -29,7 +29,6 @@ Tesco Gross Sales Price
 | 2 | 2013-03-01 | 2013-12-31 |
 | 3 | 2013-04-01 | 2015-01-01 |
 
-
 Tesco Distribution Cost
 | Row ID | Valid From | Valid To |
 | -- | -- | -- |
@@ -37,20 +36,17 @@ Tesco Distribution Cost
 | 5 | 2013-03-01 | 2014-04-01 |
 | 6 | 2013-12-31 | 2015-01-01 |
 
-
 Asda Gross Sales Price
 | Row ID | Valid From | Valid To |
 | -- | -- | -- |
 | 7 | 0000-00-00 | 9999-99-99 |
 | 8 | 2013-12-31 | 2015-01-01 |
 
-
 Asda Distribution Cost
 | Row ID | Valid From | Valid To |
 | -- | -- | -- |
 | 9 | 2013-03-01 | 2013-12-31 |
 | 10 | 2014-04-01 | 2015-01-01 |
-
 
 I have assumed that the dates in row 7 are incorrect, I will therefore refer to them as NULL.
 
