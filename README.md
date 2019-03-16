@@ -22,35 +22,35 @@ Reading the question, it informs me that my solution must be generic. Looking at
 
 To me, it made sense to split the data table into 4 distinct sub-tables to get an idea as to what should be paired together once the query is run:
 
-```Tesco Gross Sales Price
+Tesco Gross Sales Price
 | Row ID | Valid From | Valid To |
 | :---: | :------------: | :----------: |
 | 1     | 2013-01-01     | 2013-04-01   |
 | 2   | 2013-03-01     | 2013-12-31   |
 | 3   | 2013-04-01     | 2015-01-01   |
-```
 
-```Tesco Distribution Cost
+
+Tesco Distribution Cost
 | Row ID | Valid From | Valid To |
 | :---: | :------------: | :----------: |
 | 4     | 2013-01-01     | 2013-04-01   |
 | 5   | 2013-03-01     | 2014-04-01   |
 | 6   | 2013-12-31     | 2015-01-01   |
-```
 
-```Asda Gross Sales Price
+
+Asda Gross Sales Price
 | Row ID | Valid From | Valid To |
 | :---: | :------------: | :----------: |
 | 7     | 0000-00-00     | 9999-99-99   |
 | 8   | 2013-12-31     | 2015-01-01 |
-```
 
-```Asda Distribution Cost
+
+Asda Distribution Cost
 | Row ID | Valid From | Valid To |
 | :---: | :------------: | :----------: |
 | 9     | 2013-03-01     | 2013-12-31   |
 | 10   | 2014-04-01     | 2015-01-01   |
-```
+
 
 I have assumed that the dates in row 7 are incorrect, I will therefore refer to them as NULL.
 
