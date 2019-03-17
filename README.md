@@ -75,7 +75,8 @@ Knowing that I had to then output a pair of rows I looked up the GROUP BY functi
 
 ## Resources used
 
-https://www.w3schools.com/SQl/sql_groupby.asp - Group by used to pair up rows
+https://www.w3schools.com/sql/sql_join_inner.asp - Inner joins
+
 
 ## Acknowledgements
 
