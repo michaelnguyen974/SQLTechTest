@@ -159,9 +159,9 @@ I used the UPDATE function on my holder table which would update any dates neces
 
 ## Resources used
 
-https://www.w3schools.com/sql/sql_join_inner.asp - Inner joins
-https://www.techonthenet.com/sql_server/select_into.php - SELECT INTO
-https://www.w3schools.com/sql/func_sqlserver_dateadd.asp - DateAdd
+* https://www.w3schools.com/sql/sql_join_inner.asp - Inner joins
+* https://www.techonthenet.com/sql_server/select_into.php - SELECT INTO
+* https://www.w3schools.com/sql/func_sqlserver_dateadd.asp - DateAdd
 
 ## Acknowledgements
 
