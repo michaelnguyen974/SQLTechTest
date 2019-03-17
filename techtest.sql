@@ -12,4 +12,9 @@ INSERT into techtest VALUES(9, "Widgets", "Asda", "Distribution Cost", 2, 201303
 INSERT into techtest VALUES(10, "Widgets", "Asda", "Distribution Cost", 3, 20140401, 20150101);
 
 
-SELECT * FROM techtest;
+SELECT t1.rowid, t2.rowid
+FROM techtest t1
+INNER JOIN techtest t2
+    ON  t1.Product = t2.Product
+    AND t1.Customer = t2.Customer
+    AND t1.Measure = t2.Measure;

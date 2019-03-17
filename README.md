@@ -71,7 +71,15 @@ Rules to reach this output (generic row x & row y used here):
 
  *The logic I have used here to interpret the dates overlapping is that for the dates to overlap, one of the rows MUST contain an end date which is less than the start date of the other row. The start date of row x cannot be greater than the end date of row x*
 
-Knowing that I had to then output a pair of rows I looked up the GROUP BY function and utilised this.
+Knowing that I had to then output a pair of rows I looked up the GROUP BY function and attempted to utilise this. Having no luck with this, I took a break from the problem to think.
+
+From prior experience with SQL I remembered Inner Joins, this would enable me to see records in the table with matching values in specified areas:
+
+![Image](https://www.w3schools.com/sql/img_innerjoin.gif)
+
+The below is what I got initially - great! However there is a lot of repetition here. For example, there are pairings for row 1 & 2, as well as for rows 2 & 1. Logically these are the same to me. Also, there's instances of all rows with non-null dates being paired with themselves, for example row 1 & row 1, row 2 & row 2 etc.
+
+![Imgur](https://i.imgur.com/o7ViREV.png)
 
 ## Resources used
 
