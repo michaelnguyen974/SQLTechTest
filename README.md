@@ -21,6 +21,10 @@ The below rows contain dates which overlap, as well as identical Products, Custo
 4|5
 5|6
 
+### Part B
+
+
+
 ## Process & Approach
 
 In order to actually play with the data I created the table in question using Atom.
@@ -103,6 +107,13 @@ This results in:
 ![Imgur](https://i.imgur.com/g0jfuXp.png)
 
 This means that none of the Asda pairings work, this isn't a surprise. Looking at the dates for the Asda Gross Sales price options, one of the dates is null, therefore it cannot overlap. The dates for the Asda Distribution costs do not overlap, they therefore aren't returned.
+
+### Part B
+
+Of the rows identified in part A, update the rows to make the date ranges not overlap.
+
+From my answer to part A, I know I can ignore rows 7, 8, 9 & 10. These did not meet the criteria for part A.
+
 
 ## Resources used
 
