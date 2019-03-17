@@ -12,9 +12,10 @@ INSERT into techtest VALUES(1, "Widgets", "Tesco", "Gross Sales Price", 1, 20130
                            (10, "Widgets", "Asda", "Distribution Cost", 3, 20140401, 20150101);
 
 --PART A
-SELECT t1.rowid, t2.rowid
-FROM techtest t1
-INNER JOIN techtest t2
+SELECT *
+INTO holder
+FROM techtest AS t1
+INNER JOIN techtest AS t2
     ON  t1.Product = t2.Product
     AND t1.Customer = t2.Customer
     AND t1.Measure = t2.Measure
@@ -22,3 +23,12 @@ INNER JOIN techtest t2
     AND t1.rowid  < t2.rowid;
 
 --PART B
+UPDATE holder
+SET t1.Validto = DATEADD(day, -1, t2.Validfrom)
+WHERE t1.Product = t2.Product
+AND t1.Customer = t2.Customer
+AND t1.Measure = t2.Measure
+AND MAX(t1.Validfrom, t2.Validfrom) < MIN (t1.Validto, t2.Validto)
+AND t1.rowid  < t2.rowid
+
+SELECT * FROM holder

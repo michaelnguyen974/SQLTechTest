@@ -23,6 +23,15 @@ The below rows contain dates which overlap, as well as identical Products, Custo
 
 ### Part B
 
+![Imgur](https://i.imgur.com/h5PFR55.png)
+
+### Part C
+
+Assumptions made:
+
+* Rows cannot simply be deleted, if this were the case then Row 2 would be deleted to make room for Tesco Gross Sales Prices in Rows 1 & 3, as such they wouldn't overlap
+* Row 7 dates are NULL
+* Dates cannot overlap at all, they must be different by 1 day when sorted
 
 
 ## Process & Approach
@@ -112,13 +121,47 @@ This means that none of the Asda pairings work, this isn't a surprise. Looking a
 
 Of the rows identified in part A, update the rows to make the date ranges not overlap.
 
-From my answer to part A, I know I can ignore rows 7, 8, 9 & 10. These did not meet the criteria for part A.
+From my answer to part A, I know I can ignore rows 7, 8, 9 & 10 when answering for this specific dataset - I know that a generic answer cannot exclude these as possible future datasets may have data in these rows which meet part A.
 
+Before writing any code, I know that this problem can be split into the two Measures (Distribution Costs & Gross Sales price).
+
+Tesco Gross Sales Price
+
+| Row ID | Valid From | Valid To |
+| -- | -- | -- |
+| 1 | 2013-01-01 | 2013-04-01 |
+| 2 | 2013-03-01 | 2013-12-31 |
+| 3 | 2013-04-01 | 2015-01-01 |
+
+Tesco Distribution Cost
+
+| Row ID | Valid From | Valid To |
+| -- | -- | -- |
+| 4 | 2013-01-01 | 2013-04-01 |
+| 5 | 2013-03-01 | 2014-04-01 |
+| 6 | 2013-12-31 | 2015-01-01 |
+
+I also know how these products overlap at present, see below for my visualisation of the Gross Sales Prices:
+
+![Imgur](https://i.imgur.com/YenT4Tx.jpg)
+
+My goal here was to remove the greyspaces, effectively making an offer always be available, albeit with a different value at different times.
+
+I was struggling to get access to my data from Part A exclusively - I looked up a way of temporarily storing the data so I could refer back to it later and came across the INTO function, this enabled me to refer to the data which was already selected from Part A in Part B.
+
+Looking at the data in a bit more detail from Part A:
+
+![Imgur](https://i.imgur.com/QEA3L9u.png)
+
+I can see that each row contains the pairs of data needed. As I assumed I couldn't delete any rows, I opted for an approach using DATEADD, to set the Validto date of the left side (t1) to be one day before the given Validfrom date of the right hand side (t2).
+
+I used the UPDATE function on my holder table which would update any dates necessary which meet the listed criteria from part A.
 
 ## Resources used
 
 https://www.w3schools.com/sql/sql_join_inner.asp - Inner joins
-
+https://www.techonthenet.com/sql_server/select_into.php - SELECT INTO
+https://www.w3schools.com/sql/func_sqlserver_dateadd.asp - DateAdd
 
 ## Acknowledgements
 
