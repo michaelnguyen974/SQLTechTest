@@ -38,7 +38,7 @@ Assumptions made:
 
 In order to actually play with the data I created the table in question using Atom.
 
-![Imgur](https://i.imgur.com/EWHBp9V.png)
+![Imgur](https://i.imgur.com/YBqKZUp.png)
 
 I then entered this SQL into an online editor [Jdoodle](https://www.jdoodle.com/execute-sql-online) which enabled me to run the query.
 
