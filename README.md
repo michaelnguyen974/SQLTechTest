@@ -81,6 +81,18 @@ The below is what I got initially - great! However there is a lot of repetition 
 
 ![Imgur](https://i.imgur.com/o7ViREV.png)
 
+Adding the below line ensured the removal of duplicates by only allowing the id of the row from our 1st table to be less than the id of the row from our second table. This also explicitly removes the ability for two rows with the same id to be returned:
+
+```
+AND t1.rowid  < t2.rowid
+```
+
+This results in:
+
+![Imgur](https://i.imgur.com/g0jfuXp.png)
+
+This means that none of the Asda pairings work, this isn't a surprise. Looking at the dates for the Asda Gross Sales price options, one of the dates is null, therefore it cannot overlap. The dates for the Asda Distribution costs do not overlap, they therefore aren't returned.
+
 ## Resources used
 
 https://www.w3schools.com/sql/sql_join_inner.asp - Inner joins

@@ -18,4 +18,5 @@ INNER JOIN techtest t2
     ON  t1.Product = t2.Product
     AND t1.Customer = t2.Customer
     AND t1.Measure = t2.Measure
-    AND MAX(t1.Validfrom, t2.Validfrom) < MIN (t1.Validto, t2.Validto);
+    AND MAX(t1.Validfrom, t2.Validfrom) < MIN (t1.Validto, t2.Validto)
+    AND t1.rowid  < t2.rowid;
