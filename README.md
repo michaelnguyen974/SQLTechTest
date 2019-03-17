@@ -10,6 +10,17 @@ C. Document any assumptions or decisions you needed to make for your solution.
 
 ## Answers
 
+### Part A
+
+The below rows contain dates which overlap, as well as identical Products, Customers & Measures:
+
+| row id | 2nd row id |
+| -- | -- |
+1|2
+2|3
+4|5
+5|6
+
 ## Process & Approach
 
 In order to actually play with the data I created the table in question using Atom.
